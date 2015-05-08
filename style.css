@@ -1,0 +1,7 @@
+@charset "UTF-8";
+/* CSS Document */
+.main{margin:auto;width:970px;}
+.logo { width:200px; height:138px; padding:0; margin:0 auto; float:left;}
+.login{width:720px; height:138px; margin:0 ;padding:0;float: right;vertical-align:text-bottom;position:relative;}
+.login form{position:absolute;bottom:6px;right:0px;text-align:right;float:right;}
+.content{text-align:center;}
