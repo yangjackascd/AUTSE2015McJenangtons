@@ -1,17 +1,11 @@
 <?php
-
-function safestrip($string) {
-    $string = strip_tags($string);
-    $string = mysql_real_escape_string($string);
-    return $string;
-}
-
+require_once('safestrip.php');
 require_once('config/sqlaccess.inc.php');
-$account = $_POST['account'];
-$pwd = $_POST['pwd'];
+$account =safestrip( $_POST['account']);
+$pwd = safestrip($_POST['pwd']);
 // $pass = md5($pass);
 
-if (isset($account) && isset($pwd)) {
+if (!empty($account) && !empty($pwd)) {
     $conn = new mysqli($servername, $username, $password, $dbname);
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
@@ -30,9 +24,7 @@ if (isset($account) && isset($pwd)) {
         echo "the account do not exists";
     }
     $conn->close();
-} else {
-    echo "account and password cant be empty";
-}
+} 
 ?>
 
 
