@@ -16,7 +16,10 @@ if (!empty($search)) {
                 $paper = $row["paper_name"];
                 echo "<br><br><a href='#'>$paper</a><hr>";
             }
-        } 
+        }
+ else {
+     echo "<p><h1>no result!</h1></p>";
+ }
     $conn->close();
 }
 ?>

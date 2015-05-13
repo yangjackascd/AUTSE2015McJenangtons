@@ -44,10 +44,9 @@
             <div class = "content">
 
                 <h1>SERLER</h1>
-                <form action="searchresult.html">
-                    <input type="text" id="searchbar" name= "search" placeholder="Search..">
-                        <input type="button" name= "searching" class="searchbtn" onClick = "searchData('search.php', 'searchresult', search.value)" value="Search">
-                            
+                <form onsubmit = "senddata();" action="searchresult.html">
+                    <input type="text" id="searchbar" name= "search" placeholder="Search..">               
+                        <input type="submit"class="searchbtn" value="Search">
                             </form>
 
                             </div>

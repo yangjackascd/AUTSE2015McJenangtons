@@ -9,6 +9,7 @@
         <title>SERLER</title>
 
     </head>
+
     <body>
         <div class = "main" >
 
@@ -19,7 +20,9 @@
                         <input type="button" name= "searching" class="searchbtn" onClick = "searchData('search.php', 'searchresult', search.value)" value="Search">
                             </form>
                             <div id="searchresult">
-                                
+                                <script type="text/javascript">
+                                    onrunsearch('search.php', 'searchresult');
+                                </script>
                             </div>
 
                             </div>
