@@ -8,44 +8,48 @@
         <link href="style.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
+        <div class = "login">
+            <div id="logintab"></div>
+            <div id="logintable">
+                <form accept-charset="utf-8">
+                    <table>
+                        <tr>
+                            <td>Account:<input type="text" name= "account" required> </td>
+                            <td>Password: <input type = "password" name="password" required></td>
+                        </tr>
+                        <tr>
+                            <td><a href= "">Forgot Password</a></td>
+                            <td><input name="login" type ="button" class ="loginbtn" onClick = "getData('login.php', 'taglog', account.value, password.value)"  value="Login" ></td>  
+                        </tr>
+
+                    </table>          
+                </form>
+            </div>
+        </div>
         <div class = "main">
-            <div class ="header">
-                <div class= "logo"><img src="images/autlogo.png" alt="AUT" height="130px"/></div>
-                <div class ="logininfo" ><p id = "taglog">Welcome!</p></div>
-                <div class = "login" >
-                    <form accept-charset="utf-8"> 
-                        <table style="width:100%">
-                            <tr>
-                                <td>Account: </td>
-                                <td><input type="text" name= "account" required></td> 
-
-                            </tr>
-                            <tr>
-                                <td>Password: </td>
-                                <td><input type = "password" name="password" required></td> 
-
-                            </tr>
-                            <tr>
-                                <td><a href= "register.html">Register</a></td>
-                                <td> <input name="login" type ="button" class ="loginbtn" onClick = "getData('login.php', 'taglog', account.value, password.value)"  value="Login"></td>  
-                            </tr>
-                            <tr>
-                                <td></td>  
-                                <td><a href= "">Forgot Password</a></td>
-                            </tr>
-                        </table>
-                    </form>
-
-
+            <div class ="header">  
+                <div class= "logo"><a href="index.html"><img src="images/autlogo.png" alt="AUT"/></a></div>
+                <div class ="menu">
+                    <nav>
+                        <ul>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="register.html">Become a user</a></li>
+                            <li><a href="#">Resources</a></li>
+                            <li><a href="#">Wiki</a></li>
+                        </ul>
+                    </nav>
                 </div>
+
             </div>
             <div class = "content">
+
                 <h1>SERLER</h1>
-                <form>
+                <form action="searchresult.html">
                     <input type="text" id="searchbar" name= "search" placeholder="Search..">
                         <input type="button" name= "searching" class="searchbtn" onClick = "searchData('search.php', 'searchresult', search.value)" value="Search">
+                            
                             </form>
-                            <div id="searchresult"></div>
+
                             </div>
                             </div> 
                             </body>

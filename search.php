@@ -1,7 +1,5 @@
 <?php
 require_once('safestrip.php');
-
-
 require_once('config/sqlaccess.inc.php');
 $search = safestrip($_POST['search']);
 
@@ -16,7 +14,7 @@ if (!empty($search)) {
     if (mysqli_num_rows($result)>0) {
            while ($row = mysqli_fetch_assoc($result)) {
                 $paper = $row["paper_name"];
-                echo $paper."<hr><br><br>";
+                echo "<br><br><a href='#'>$paper</a><hr>";
             }
         } 
     $conn->close();
