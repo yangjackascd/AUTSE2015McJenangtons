@@ -21,7 +21,7 @@ function searchData(dataSource, divID, aSearch) {
     if (xhr) {
         var obj = document.getElementById(divID);
         var requestbody = "search=" + encodeURIComponent(aSearch);
-        
+
         xhr.open("POST", dataSource, true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.onreadystatechange = function () {
@@ -31,11 +31,11 @@ function searchData(dataSource, divID, aSearch) {
             } // end if
         } // end anonymous call-back function
         xhr.send(requestbody);
-       
+
     } // end if   
 }
-function onrunsearch(dataSource, divID){
-        if (xhr) {
+function onrunsearch(dataSource, divID) {
+    if (xhr) {
         var obj = document.getElementById(divID);
         var searchr = localStorage.getItem("searchtest");
         var requestbody = "search=" + searchr;
@@ -54,9 +54,7 @@ function onrunsearch(dataSource, divID){
 function senddata() {
     // Getting the value of your text input
     var mysearch = document.getElementById("searchbar").value;
-
     // Storing the value above into localStorage
     localStorage.setItem("searchtest", mysearch);
-    
     return true;
 }
