@@ -16,7 +16,7 @@
             <div id="searchnewpage">
 
                 <form>
-                    <a href="index.html"><img src="images/autlogo.png" alt="AUT" height="40px" style="vertical-align:bottom;"/></a> <input type="text" id="searchbar" name= "search" placeholder="Search..">
+                    <a href="index.php"><img src="images/autlogo.png" alt="AUT" height="40px" style="vertical-align:bottom;"/></a> <input type="text" id="searchbar" name= "search" placeholder="Search..">
                         <input type="button" name= "searching" class="searchbtn" onClick = "searchData('search.php', 'searchresult', search.value)" value="Search">
                             </form>
                             <div id="searchresult">

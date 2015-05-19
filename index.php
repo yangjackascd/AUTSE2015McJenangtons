@@ -28,12 +28,12 @@
         </div>
         <div class = "main">
             <div class ="header">  
-                <div class= "logo"><a href="index.html"><img src="images/autlogo.png" alt="AUT"/></a></div>
+                <div class= "logo"><a href="index.php"><img src="images/autlogo.png" alt="AUT"/></a></div>
                 <div class ="menu">
                     <nav>
                         <ul>
                             <li><a href="#">About us</a></li>
-                            <li><a href="register.html">Become a user</a></li>
+                            <li><a href="register.php">Become a user</a></li>
                             <li><a href="#">Resources</a></li>
                             <li><a href="#">Wiki</a></li>
                         </ul>
@@ -44,7 +44,7 @@
             <div class = "content">
 
                 <h1>SERLER</h1>
-                <form onsubmit = "senddata();" action="searchresult.html">
+                <form onsubmit = "senddata();" action="searchresult.php">
                     <input type="text" id="searchbar" name= "search" placeholder="Search..">               
                         <input type="submit"class="searchbtn" value="Search">
                             </form>

@@ -10,7 +10,7 @@
     <body>
 
         <div class="main">
-            <div class= "logo"><a href="index.html"><img src="images/autlogo.png" alt="AUT"/></a></div>
+            <div class= "logo"><a href="index.php"><img src="images/autlogo.png" alt="AUT"/></a></div>
             <div class="register">
                 <form>
                     <table>
