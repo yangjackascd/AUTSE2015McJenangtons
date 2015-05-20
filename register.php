@@ -27,6 +27,16 @@
         </div>
         <div class="main">
             <div class= "logo"><a href="index.php"><img src="images/autlogo.png" alt="AUT"/></a></div>
+             <div class ="menu">
+                    <nav>
+                        <ul>
+                            <li><a href="about.php">About Serler</a></li>
+                            <li><a href="register.php">Become a User</a></li>
+                            <li><a href="#">Resources</a></li>
+                            <li><a href="#">Wiki</a></li>
+                        </ul>
+                    </nav>
+                </div>
             <div class="register">
                 <form>
                     <table>

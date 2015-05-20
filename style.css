@@ -13,7 +13,7 @@ body{
 .logo { width:970px; height:130px; padding-top: 10px; margin:0 auto; text-align:center;}
 .menu{text-align:center;padding-top:0px; }
 .content{text-align:center;width:970px; padding-top: 0px;}
-.register{width:410px;margin:0 auto;padding-top: 60px}
+.register{width:410px;margin:0 auto;padding-top: 10px}
 #searchbar{font-size: 17px; height: 30px;width: 500px;}
 .searchbtn {
     -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
