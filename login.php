@@ -1,16 +1,15 @@
 <?php
+
 session_start();
 // Store Session Data
-
 require_once('safestrip.php');
 require_once('config/sqlaccess.inc.php');
-$account =safestrip( $_POST['account']);
+$account = safestrip($_POST['account']);
 $pwd = safestrip($_POST['pwd']);
-
-
+$now_url=$_SESSION["current_url"];
 
 if (!empty($account) && !empty($pwd)) {
-    
+
     $conn = new mysqli($servername, $username, $password, $dbname);
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
@@ -20,18 +19,26 @@ if (!empty($account) && !empty($pwd)) {
     $result = $conn->query($sql_check_name);
     $result1 = $conn->query($sql_check_password);
     if (mysqli_num_rows($result) == 1) {
-        $_SESSION['login_user']= $account;  // Initializing Session with value of PHP Variable
-         echo $_SESSION['login_user'];
         if (mysqli_num_rows($result1) == 1) {
-            echo "Welcome $account !";
+            $_SESSION["accountid"] = $account;
+            echo "Welcome $account !   ";
+            echo "<a href='logout.php'>Log out</a>";
+            include("loginnavigation.html");
+//
         } else {
-            echo "the password is wrong.";
+            echo "The password is wrong.   ";
+            echo "<a href='$now_url'>Retry</a>";
         }
     } else {
-        echo "the account do not exists";
+        echo "The account do not exists.   ";
+        echo "<a href='$now_url'>Retry</a>";
     }
     $conn->close();
-} 
+}
+ else {
+    echo "The account or passowrd can not be empty   ";
+    echo "<a href='$now_url'>Retry</a>";
+}
 ?>
 
 

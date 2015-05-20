@@ -15,10 +15,10 @@ if (!empty($search)) {
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             $paper = $row["paper_name"];
-            echo "<br><br><a href='#'>$paper</a><hr>";
+            echo "<p><br><br><a href='#'>$paper</a><hr><p>";
         }
     } else {
-        echo "<p><h1>no result!</h1></p>";
+        echo "<p><h1>Do not have such result!</h1></p>";
     }
     $conn->close();
 }

@@ -11,20 +11,39 @@
     </head>
 
     <body>
-        <div class = "main" >
-
-            <div id="searchnewpage">
-
+        <div class = "login">
+            <div style="float:left">
                 <form>
                     <a href="index.php"><img src="images/autlogo.png" alt="AUT" height="40px" style="vertical-align:bottom;"/></a> <input type="text" id="searchbar" name= "search" placeholder="Search..">
                         <input type="button" name= "searching" class="searchbtn" onClick = "searchData('search.php', 'searchresult', search.value)" value="Search">
                             </form>
-                            <div id="searchresult">
-                                <script type="text/javascript">
-                                    onrunsearch('search.php', 'searchresult');
-                                </script>
+                            </div>
+                            <div id="logintab"></div>
+                            <div id="logintable"> 
+                                <?php
+                                session_start();
+                                $_SESSION["current_url"] = basename($_SERVER['PHP_SELF']);
+                                if (!empty($_SESSION["accountid"]) && isset($_SESSION["accountid"])) {
+                                    $accountid = $_SESSION["accountid"];
+                                    echo "Welcome $accountid !   ";
+                                    echo "<a href='logout.php'>Log out</a>";
+                                    include("loginnavigation.html");
+                                } else {
+                                    include("loginform.html");
+                                }
+                                ?>
                             </div>
                             </div>
+                            <div class = "main" >
+                                <div id="searchnewpage">
+
+                                    <div id="searchresult">
+                                        <script type="text/javascript">
+                                            onrunsearch('search.php', 'searchresult');
+                                        </script>
+                                    </div>
+                                </div>
+
                             </div>
                             </body>
                             </html>

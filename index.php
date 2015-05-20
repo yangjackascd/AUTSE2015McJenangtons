@@ -7,23 +7,25 @@
         <title>SERLER</title>
         <link href="style.css" rel="stylesheet" type="text/css" />
     </head>
+    <?php
+   
+    ?>
     <body>
         <div class = "login">
             <div id="logintab"></div>
-            <div id="logintable">
-                <form accept-charset="utf-8">
-                    <table>
-                        <tr>
-                            <td>Account:<input type="text" name= "account" required> </td>
-                            <td>Password: <input type = "password" name="password"  placeholder="**********" required></td>
-                        </tr>
-                        <tr>
-                            <td><a href= "">Forgot Password</a></td>
-                            <td><input name="login" type ="button" class ="loginbtn" onClick = "getData('login.php', 'logintable', account.value, password.value)"  value="Login" ></td>  
-                        </tr>
-
-                    </table>          
-                </form>
+            <div id="logintable"> 
+                <?php
+                session_start();
+                $_SESSION["current_url"] = basename($_SERVER['PHP_SELF']);
+                if (!empty($_SESSION["accountid"]) && isset($_SESSION["accountid"])) {
+                    $accountid = $_SESSION["accountid"];
+                    echo "Welcome $accountid !   ";
+                    echo "<a href='logout.php'>Log out</a>";
+                    include("loginnavigation.html");
+                } else {
+                    include("loginform.html");
+                }
+                ?>
             </div>
         </div>
         <div class = "main">
@@ -32,8 +34,8 @@
                 <div class ="menu">
                     <nav>
                         <ul>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="register.php">Become a user</a></li>
+                            <li><a href="about.php">About Serler</a></li>
+                            <li><a href="register.php">Become a User</a></li>
                             <li><a href="#">Resources</a></li>
                             <li><a href="#">Wiki</a></li>
                         </ul>
@@ -42,10 +44,9 @@
 
             </div>
             <div class = "content">
-
                 <h1>SERLER</h1>
                 <form onsubmit = "senddata();" action="searchresult.php">
-                    <input type="text" id="searchbar" name= "search" placeholder="Search..">               
+                    <input type="text" id="searchbar" name= "search" placeholder="SERLER Search.." required>               
                         <input type="submit"class="searchbtn" value="Search">
                             </form>
                             </div>
