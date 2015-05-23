@@ -19,9 +19,9 @@ function getData(dataSource, divID, aAccount, aPassword) {
 
 function searchData(dataSource, divID, aSearch) {
     if (xhr) {
+        localStorage.setItem("searchtest", aSearch);
         var obj = document.getElementById(divID);
-        var requestbody = "search=" + encodeURIComponent(aSearch);
-
+        var requestbody = "search=" + encodeURIComponent(aSearch);   
         xhr.open("POST", dataSource, true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.onreadystatechange = function () {
@@ -31,6 +31,7 @@ function searchData(dataSource, divID, aSearch) {
             } // end if
         } // end anonymous call-back function
         xhr.send(requestbody);
+        return true;
 
     } // end if   
 }

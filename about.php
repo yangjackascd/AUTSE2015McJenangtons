@@ -11,7 +11,7 @@
         <div class = "login">
             <div id="logintab"></div>
             <div id="logintable">
-                <?php     
+                <?php
                 session_start();
                 $_SESSION["current_url"] = basename($_SERVER['PHP_SELF']);
                 if (!empty($_SESSION["accountid"]) && isset($_SESSION["accountid"])) {
@@ -19,9 +19,8 @@
                     echo "Welcome $accountid !   ";
                     echo "<a href='logout.php'>Log out</a>";
                     include("loginnavigation.html");
-                    
                 } else {
-                   include("loginform.html");
+                    include("loginform.html");
                 }
                 ?>
             </div>
@@ -29,7 +28,7 @@
         <div class = "main">
             <div class ="main">  
                 <div class= "logo"><a href="index.php"><img src="images/autlogo.png" alt="AUT"/></a></div>
-                 <div class ="menu">
+                <div class ="menu">
                     <nav>
                         <ul>
                             <li><a href="about.php">About Serler</a></li>
@@ -50,8 +49,8 @@
 
                     <br><br><br><br><a href="index.php">Return to home page</a></p>
 
-                                            </div>
+                                    </div>
 
-                                            </div> 
-                                            </body>
-                                            </html>
+                                    </div> 
+                                    </body>
+                                    </html>
