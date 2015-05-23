@@ -59,3 +59,25 @@ function senddata() {
     localStorage.setItem("searchtest", mysearch);
     return true;
 }
+//adddata in to server and DB
+
+function add(dataSource, id, name, email, divID) {
+    if (xhr) {
+        var printnow = document.getElementById(divID);
+        var ids = document.getElementById(id).value;
+        var names = document.getElementById(name).value;
+        var emails = document.getElementById(email).value;
+        var requestbody = "iD=" + encodeURIComponent(ids) + "&nAme=" + encodeURIComponent(names) + "&eMail=" + encodeURIComponent(emails);
+       
+        xhr.open("POST", dataSource, true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function () {
+            // alert(xhr.readyState); // to let us see the state of the computation
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                printnow.innerHTML = xhr.responseText;
+            } // end if
+        }
+////    recode.push(id + " | " + name + " | " + email + "<br>");
+        xhr.send(requestbody);
+    }
+}

@@ -1,5 +1,5 @@
 <?php
-
+//function safestrip
 function safestrip($string) {
     $string = trim($string);
     $string = strip_tags($string);
