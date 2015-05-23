@@ -42,16 +42,16 @@
                     <table>
                         <tr>
                             <td>Account:</td>
-                            <td><input type ="text" name="sendaccount">
+                            <td><input type ="text" id="sendaccount">
                             </td>
                         </tr>
                         <tr>
                             <td>Email:</td>
-                            <td><input type ="text" name="sendemail"></td>
+                            <td><input type ="text" id="sendemail"></td>
                         </tr>
                         <tr>
                             <td>Reason:</td>
-                            <td><textarea name= "myTextBox" cols="50" rows="5"></textarea></td>
+                            <td><textarea id= "myreson" cols="50" rows="5"></textarea></td>
                         </tr>
                         <tr>
                             <td></td>

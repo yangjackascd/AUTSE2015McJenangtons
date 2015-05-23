@@ -8,6 +8,7 @@
         <link href="style.css" rel="stylesheet" type="text/css" />
     </head>
     <?php
+   
     ?>
     <body>
         <div class = "login">
@@ -59,7 +60,7 @@
                     <th><textarea id= "textbox" cols="50" rows="20"></textarea></th>
                     </tr>
                     <tr>
-                        <th></th>
+                        <th><input type="file" name="fileToUpload" id="fileToUpload"></input></th>
                         <th><input type="button" onclick="" id="mytext" value="Submit"></input></th>
                     </tr>
                 </table>

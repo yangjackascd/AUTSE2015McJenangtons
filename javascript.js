@@ -77,7 +77,6 @@ function add(dataSource, id, name, email, divID) {
                 printnow.innerHTML = xhr.responseText;
             } // end if
         }
-////    recode.push(id + " | " + name + " | " + email + "<br>");
         xhr.send(requestbody);
     }
 }
