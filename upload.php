@@ -32,36 +32,37 @@
             <div class ="header">  
                 <div class= "logo"><a href="index.php"><img src="images/autlogo.png" alt="AUT"/></a></div>
             </div>
+            <div id="unload_notice">
             <form class="register">
                 <table>
                     <tr>
                         <th>Paper Title</th>
-                        <th><input type="text" id="author" style="width: 310px"></input></th>
+                        <th><input type="text" id="paper_title" style="width: 310px"></input></th>
                       
                     </tr>
                     <tr>
                         <th>Paper Name: </th>
-                        <th><input type="text" id="papername" style="width: 310px"></input></th>
+                        <th><input type="text" id="paper_name" style="width: 310px"></input></th>
                         
                     </tr>
                     <tr>
                         <th>Author: </th>
-                        <th><input type="text" id="author" style="width: 310px"></input></th>
+                        <th><input type="text" id="paper_author" style="width: 310px"></input></th>
                         
                     </tr>
                     <tr>
                         <th>Date(year): </th>
-                        <th><input type="text" id="year" style="width: 310px"></input></th>
+                        <th><input type="text" id="paper_year" style="width: 310px"></input></th>
                         
                     </tr> 
                     <tr>
                     </tr> 
                     <th></th>
-                    <th><textarea id= "textbox" cols="50" rows="20"></textarea></th>
+                    <th><textarea id= "paper_context" cols="50" rows="20"></textarea></th>
                     </tr>
                     <tr>
-                        <th><input type="file" name="fileToUpload" id="fileToUpload"></input></th>
-                        <th><input type="button" onclick="" id="mytext" value="Submit"></input></th>
+                        <th></th>
+                        <th><input type="button" onclick="add('adddatatoDB.php','paper_title','paper_name','paper_author','paper_year','paper_context','unload_notice')" value="Submit"></input></th>
                     </tr>
                 </table>
             </form>

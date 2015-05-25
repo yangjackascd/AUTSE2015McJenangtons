@@ -7,9 +7,6 @@
         <title>SERLER</title>
         <link href="style.css" rel="stylesheet" type="text/css" />
     </head>
-    <?php
-   
-    ?>
     <body>
         <div class = "login">
             <div id="logintab"></div>

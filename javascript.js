@@ -60,21 +60,23 @@ function senddata() {
     return true;
 }
 //adddata in to server and DB
-
-function add(dataSource, id, name, email, divID) {
+//adddatatoDB.php','paper_title','paper_name','paper_author','paper_year','paper_context','unload_notice
+function add(dataSource, title, name, author, year,context,divID) {
     if (xhr) {
-        var printnow = document.getElementById(divID);
-        var ids = document.getElementById(id).value;
-        var names = document.getElementById(name).value;
-        var emails = document.getElementById(email).value;
-        var requestbody = "iD=" + encodeURIComponent(ids) + "&nAme=" + encodeURIComponent(names) + "&eMail=" + encodeURIComponent(emails);
-       
+        var unload_notice = document.getElementById(divID);
+        
+        var paper_title = document.getElementById(title).value;
+        var paper_name = document.getElementById(name).value;
+        var paper_author = document.getElementById(author).value;
+        var paper_year = document.getElementById(year).value;
+        var paper_context = document.getElementById(context).value;
+        var requestbody = "title=" + encodeURIComponent(paper_title) + "&name=" + encodeURIComponent(paper_name) + "&author=" + encodeURIComponent(paper_author)+ "&year=" + encodeURIComponent(paper_year)+ "&context=" + encodeURIComponent(paper_context);
         xhr.open("POST", dataSource, true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.onreadystatechange = function () {
             // alert(xhr.readyState); // to let us see the state of the computation
             if (xhr.readyState == 4 && xhr.status == 200) {
-                printnow.innerHTML = xhr.responseText;
+                unload_notice.innerHTML = xhr.responseText;
             } // end if
         }
         xhr.send(requestbody);
