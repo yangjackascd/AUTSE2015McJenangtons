@@ -36,7 +36,7 @@
             <form class="register">
                 <table>
                     <tr>
-                        <th>Paper Title</th>
+                        <th>Paper Class: </th>
                         <th><input type="text" id="paper_title" style="width: 310px"></input></th>
                       
                     </tr>
@@ -50,6 +50,11 @@
                         <th><input type="text" id="paper_author" style="width: 310px"></input></th>
                         
                     </tr>
+                     <tr>
+                        <th>Journal: </th>
+                        <th><input type="text" id="paper_journal" style="width: 310px"></input></th>
+                        
+                    </tr>                 
                     <tr>
                         <th>Date(year): </th>
                         <th><input type="text" id="paper_year" style="width: 310px"></input></th>
@@ -62,7 +67,7 @@
                     </tr>
                     <tr>
                         <th></th>
-                        <th><input type="button" onclick="add('adddatatoDB.php','paper_title','paper_name','paper_author','paper_year','paper_context','unload_notice')" value="Submit"></input></th>
+                        <th><input type="button" onclick="add('adddatatoDB.php','paper_title','paper_name','paper_author','paper_year','paper_context','paper_journal','unload_notice')" value="Submit"></input></th>
                     </tr>
                 </table>
             </form>

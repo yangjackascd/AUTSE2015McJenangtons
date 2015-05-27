@@ -61,7 +61,7 @@ function senddata() {
 }
 //adddata in to server and DB
 //adddatatoDB.php','paper_title','paper_name','paper_author','paper_year','paper_context','unload_notice
-function add(dataSource, title, name, author, year,context,divID) {
+function add(dataSource, title, name, author, year,context,journal,divID) {
     if (xhr) {
         var unload_notice = document.getElementById(divID);
         
@@ -70,7 +70,8 @@ function add(dataSource, title, name, author, year,context,divID) {
         var paper_author = document.getElementById(author).value;
         var paper_year = document.getElementById(year).value;
         var paper_context = document.getElementById(context).value;
-        var requestbody = "title=" + encodeURIComponent(paper_title) + "&name=" + encodeURIComponent(paper_name) + "&author=" + encodeURIComponent(paper_author)+ "&year=" + encodeURIComponent(paper_year)+ "&context=" + encodeURIComponent(paper_context);
+        var paper_journal = document.getElementById(journal).value;
+        var requestbody = "title=" + encodeURIComponent(paper_title) + "&name=" + encodeURIComponent(paper_name) + "&author=" + encodeURIComponent(paper_author)+ "&year=" + encodeURIComponent(paper_year)+ "&context=" + encodeURIComponent(paper_context)+"&journal=" + encodeURIComponent(paper_journal);
         xhr.open("POST", dataSource, true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.onreadystatechange = function () {

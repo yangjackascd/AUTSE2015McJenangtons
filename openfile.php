@@ -36,13 +36,15 @@
                             </div>
                             <div class = "main" >
                                 <div id="searchnewpage">
+
                                     <div id="searchresult">
-                                        <script type="text/javascript">
-                                            onrunsearch('search.php', 'searchresult');
-                                        </script>
+                                        <?php
+                                        include_once ('searchopen.php');                
+                                        getpaper($_GET['p_id']);
+                                        ?>
                                     </div>
                                 </div>
-                               
+
                             </div>
                             </body>
                             </html>
