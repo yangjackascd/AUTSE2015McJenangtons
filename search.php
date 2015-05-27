@@ -21,7 +21,9 @@ if (!empty($search)) {
             $paper_upload_date = $row["paper_upload_date"];
             echo "<h1>$paper_title</h1>";
             echo "<p>$paper_name<p>";
+            
             echo "<font size='2' color='#D8D8D8'>$paper_upload_date - $usern</font><br>";
+            echo "Author: $author </br>";
             echo "Year : $year<br>";
             echo "Class / experience level : $class_experience_level<br><br><br>";       
             read($paper_id);

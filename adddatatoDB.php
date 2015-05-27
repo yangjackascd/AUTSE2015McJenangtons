@@ -24,11 +24,18 @@ if (!empty($account)) {
                         $conn = new mysqli($servername, $username, $password, $dbname);
                         $sql_create_data = "INSERT INTO paper_table (paper_title, paper_name,author,year,paper_upload_date,username,status)VALUES('$paper_title','$paper_name','$paper_author','$paper_year','$date','$account',2)";
                         mysqli_query($conn, $sql_create_data);
-                        $content = $paper_context;
-                        $fp = fopen($_SERVER['DOCUMENT_ROOT'] . "/serler/onholdfile/$paper_name+$account", "wb");
-                        fwrite($fp, $content);
-                        fclose($fp);
-                        mysqli_close($conn);
+                        $sql_search_id = "SELECT paper_id FROM paper_table WHERE paper_name = '$paper_name'";
+                        $result_id = $conn->query($sql_search_id);
+                        if (mysqli_num_rows($result_id) > 0) {
+                            while ($row = mysqli_fetch_assoc($result_id)) {
+                                $id = $row["paper_id"];
+                                $content = $paper_context;
+                                $fp = fopen($_SERVER['DOCUMENT_ROOT'] . "/serler/files/$id", "wb");
+                                fwrite($fp, $content);
+                                fclose($fp);
+                                mysqli_close($conn);
+                            }
+                        }
                         echo "Submited!  ";
                         echo "<a href='upload.php'>Upload another</a>";
                     } else {
