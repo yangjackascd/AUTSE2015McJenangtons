@@ -13,7 +13,7 @@ body{
 .logo { width:970px; height:130px; padding-top: 10px; margin:0 auto; text-align:center;}
 .menu{text-align:center;padding-top:0px; }
 .content{text-align:center;width:970px; padding-top: 0px;}
-.register{width:510px;margin:0 auto;padding-top: 10px}
+.register{width:610px;margin:0 auto;padding-top: 10px}
 #searchbar{font-size: 17px; height: 30px;width: 500px;}
 .searchbtn {
     -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -55,43 +55,43 @@ body{
     top:1px;
 }
 nav ul ul {
-	display: none;
+    display: none;
 }
-	nav ul li:hover > ul {
-		display: block;
-	}
+nav ul li:hover > ul {
+    display: block;
+}
 nav ul {
-	background: #efefef; 
-	background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
-	background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
-	background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
-	box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
-	padding: 0 0px;
-	border-radius: 6px;  
-	list-style: none;
-	position: relative;
-	display: inline-table;
+    background: #efefef; 
+    background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
+    background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
+    background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
+    box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
+    padding: 0 0px;
+    border-radius: 6px;  
+    list-style: none;
+    position: relative;
+    display: inline-table;
 }
-	nav ul:after {
-		content: ""; clear: both; display: block;
-	}
+nav ul:after {
+    content: ""; clear: both; display: block;
+}
 nav ul li {
-	float: left;
+    float: left;
 }
-	nav ul li:hover {
-		background: #4b545f;
-		background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
-		background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);
-		background: -webkit-linear-gradient(top, #4f5964 0%,#5f6975 40%);
-	}
-		nav ul li:hover a {
-			color: #fff;
-		}
-	
-	nav ul li a {
-		display: block; padding: 12px 37px;
-		color: #757575; text-decoration: none;
-	}
+nav ul li:hover {
+    background: #4b545f;
+    background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
+    background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);
+    background: -webkit-linear-gradient(top, #4f5964 0%,#5f6975 40%);
+}
+nav ul li:hover a {
+    color: #fff;
+}
+
+nav ul li a {
+    display: block; padding: 12px 37px;
+    color: #757575; text-decoration: none;
+}
 nav ul ul {
     background: #5f6975; border-radius: 0px; padding: 0;
     position: absolute; top: 100%;
@@ -115,121 +115,159 @@ nav ul ul ul {
 
 /* NAVIGATION */
 .navigation {
-  list-style: none;
-  padding: 0;
-  width: 100px; 
-  height: 40px; 
-  margin: 20px 334px;
-  background: #95C11F;
-  position: relative; 
-  z-index: 100;
+    list-style: none;
+    padding: 0;
+    width: 100px; 
+    height: 40px; 
+    margin: 20px 334px;
+    background: #95C11F;
+    position: relative; 
+    z-index: 100;
 }
 
 .navigation, .navigation a.mainna {
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
 }
 
 .navigation:hover, .navigation:hover a.mainna {
-  border-radius: 4px 4px 0 0;
-  -webkit-border-radius: 4px 4px 0 0;
-  -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
 }
 
 .navigation a.mainna {
-  display: block; 
-  height: 40px;
-  font: bold 15px/40px arial, sans-serif; 
-  text-align: center; 
-  text-decoration: none; 
-  color: #FFF;  
-  -webkit-transition: 0.2s ease-in-out;
-  -o-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out;
-  position: relative;
-  z-index: 100;
+    display: block; 
+    height: 40px;
+    font: bold 15px/40px arial, sans-serif; 
+    text-align: center; 
+    text-decoration: none; 
+    color: #FFF;  
+    -webkit-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    position: relative;
+    z-index: 100;
 }
 
 .navigation:hover a.mainna {
-  color: rgba(255,255,255,0.6);
-  background: rgba(0,0,0,0.04);
+    color: rgba(255,255,255,0.6);
+    background: rgba(0,0,0,0.04);
 }
 
 .navigation li { 
-  width: 100px; 
-  height: 40px;
-  background: #F7F7F7;
-  font: normal 12px/40px arial, sans-serif !important; 
-  color: #999;
-  text-align: center;
-  margin: 0;
-  -webkit-transform-origin: 50% 0%;
-  -o-transform-origin: 50% 0%;
-  transform-origin: 50% 0%;
-  -webkit-transform: perspective(350px) rotateX(-90deg);
-  -o-transform: perspective(350px) rotateX(-90deg);
-  transform: perspective(350px) rotateX(-90deg);
-  box-shadow: 0px 2px 10px rgba(0,0,0,0.05);
-  -webkit-box-shadow: 0px 2px 10px rgba(0,0,0,0.05);
-  -moz-box-shadow: 0px 2px 10px rgba(0,0,0,0.05);
+    width: 100px; 
+    height: 40px;
+    background: #F7F7F7;
+    font: normal 12px/40px arial, sans-serif !important; 
+    color: #999;
+    text-align: center;
+    margin: 0;
+    -webkit-transform-origin: 50% 0%;
+    -o-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    -webkit-transform: perspective(350px) rotateX(-90deg);
+    -o-transform: perspective(350px) rotateX(-90deg);
+    transform: perspective(350px) rotateX(-90deg);
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.05);
+    -webkit-box-shadow: 0px 2px 10px rgba(0,0,0,0.05);
+    -moz-box-shadow: 0px 2px 10px rgba(0,0,0,0.05);
 }
 
 .navigation li:nth-child(even) { background: #F5F5F5; }
 .navigation li:nth-child(odd) { background: #EFEFEF; }
 
 .navigation li.n1 { 
-  -webkit-transition: 0.2s linear 0.8s;
-  -o-transition: 0.2s linear 0.8s;
-  transition: 0.2s linear 0.8s;
+    -webkit-transition: 0.2s linear 0.8s;
+    -o-transition: 0.2s linear 0.8s;
+    transition: 0.2s linear 0.8s;
 }
 .navigation li.n2 {
-  -webkit-transition: 0.2s linear 0.6s;
-  -o-transition: 0.2s linear 0.6s;
-  transition: 0.2s linear 0.6s;
+    -webkit-transition: 0.2s linear 0.6s;
+    -o-transition: 0.2s linear 0.6s;
+    transition: 0.2s linear 0.6s;
 }
 .navigation li.n3 {
-  -webkit-transition: 0.2s linear 0.4s;
-  -o-transition: 0.2s linear 0.4s;
-  transition: 0.2s linear 0.4s;
+    -webkit-transition: 0.2s linear 0.4s;
+    -o-transition: 0.2s linear 0.4s;
+    transition: 0.2s linear 0.4s;
 }
 .navigation li.n4 { 
-  -webkit-transition:0.2s linear 0.2s;
-  -o-transition:0.2s linear 0.2s;
-  transition:0.2s linear 0.2s;
+    -webkit-transition:0.2s linear 0.2s;
+    -o-transition:0.2s linear 0.2s;
+    transition:0.2s linear 0.2s;
 }
 .navigation li.n5 {
-  border-radius: 0px 0px 4px 4px;
-  -webkit-transition: 0.2s linear 0s;
-  -o-transition: 0.2s linear 0s;
-  transition: 0.2s linear 0s;
+    border-radius: 0px 0px 4px 4px;
+    -webkit-transition: 0.2s linear 0s;
+    -o-transition: 0.2s linear 0s;
+    transition: 0.2s linear 0s;
 }
 
 .navigation:hover li {
-  -webkit-transform: perspective(350px) rotateX(0deg);
-  -o-transform: perspective(350px) rotateX(0deg);
-  transform: perspective(350px) rotateX(0deg);
-  -webkit-transition:0.2s linear 0s;
-  -o-transition:0.2s linear 0s;
-  transition:0.2s linear 0s;
+    -webkit-transform: perspective(350px) rotateX(0deg);
+    -o-transform: perspective(350px) rotateX(0deg);
+    transform: perspective(350px) rotateX(0deg);
+    -webkit-transition:0.2s linear 0s;
+    -o-transition:0.2s linear 0s;
+    transition:0.2s linear 0s;
 }
 .navigation:hover .n2 {
-  -webkit-transition-delay: 0.2s;
-  -o-transition-delay: 0.2s;
-  transition-delay: 0.2s;
+    -webkit-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
 }
 .navigation:hover .n3 {
-  -webkit-transition-delay: 0.4s;
-  -o-transition-delay: 0.4s;
-  transition-delay: 0.4s;
+    -webkit-transition-delay: 0.4s;
+    -o-transition-delay: 0.4s;
+    transition-delay: 0.4s;
 }
 .navigation:hover .n4 {
-  transition-delay: 0.6s;
-  -o-transition-delay: 0.6s;
-  transition-delay: 0.6s;
+    transition-delay: 0.6s;
+    -o-transition-delay: 0.6s;
+    transition-delay: 0.6s;
 }
 .navigation:hover .n5 {
-  -webkit-transition-delay: 0.8s;
-  -o-transition-delay: 0.8s;
-  transition-delay: 0.8s;
+    -webkit-transition-delay: 0.8s;
+    -o-transition-delay: 0.8s;
+    transition-delay: 0.8s;
+}
+
+//table 
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+}
+/* Zebra striping */
+
+td, th { 
+    padding: 6px; 
+    border: 1px solid #ccc; 
+    text-align: left; 
+}
+//rating system
+.rating {
+    overflow: hidden;
+    display: inline-block;
+
+}
+.rating-input {
+    position: absolute;
+    left: 0;
+    top: -50px;
+}
+
+.rating-star {        
+    display: block;
+    float: right;
+    width: 16px;
+    height: 16px;
+    background: url('images/star.png') 0 -16px;
+}
+
+.rating-star:hover,
+.rating-star:hover ~ .rating-star,
+.rating-input:checked ~ .rating-star {
+    background-position: 0 0;
 }

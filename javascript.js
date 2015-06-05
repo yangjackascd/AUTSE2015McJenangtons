@@ -61,7 +61,32 @@ function senddata() {
 }
 //adddata in to server and DB
 //adddatatoDB.php','paper_title','paper_name','paper_author','paper_year','paper_context','unload_notice
-function add(dataSource, title, name, author, year,context,journal,divID) {
+//function add(dataSource, title, name, author, year,context,journal,divID) {
+//    if (xhr) {
+//        var unload_notice = document.getElementById(divID);
+//        
+//        var paper_title = document.getElementById(title).value;
+//        var paper_name = document.getElementById(name).value;
+//        var paper_author = document.getElementById(author).value;
+//        var paper_year = document.getElementById(year).value;
+//        var paper_context = document.getElementById(context).value;
+//        var paper_journal = document.getElementById(journal).value;
+//        var requestbody = "title=" + encodeURIComponent(paper_title) + "&name=" + encodeURIComponent(paper_name) + "&author=" + encodeURIComponent(paper_author)+ "&year=" + encodeURIComponent(paper_year)+ "&context=" + encodeURIComponent(paper_context)+"&journal=" + encodeURIComponent(paper_journal);
+//        xhr.open("POST", dataSource, true);
+//        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+//        xhr.onreadystatechange = function () {
+//            // alert(xhr.readyState); // to let us see the state of the computation
+//            if (xhr.readyState == 4 && xhr.status == 200) {
+//                unload_notice.innerHTML = xhr.responseText;
+//            } // end if
+//        }
+//        xhr.send(requestbody);
+//    }
+//}
+//adddatatoDB.php', 'paper_title', 'paper_name', 'paper_author', 'paper_year', 'paper_context', 
+//'paper_journal', 'unload_notice', rating_c.value, 'paper_credibility_reason', 'paper_credibility_who',
+//rating_c.value
+function addrating(dataSource,divID, title, name, author, year,journal,ratingC,ratingReason,ratingWho,ratingCf){
     if (xhr) {
         var unload_notice = document.getElementById(divID);
         
@@ -69,9 +94,11 @@ function add(dataSource, title, name, author, year,context,journal,divID) {
         var paper_name = document.getElementById(name).value;
         var paper_author = document.getElementById(author).value;
         var paper_year = document.getElementById(year).value;
-        var paper_context = document.getElementById(context).value;
+
         var paper_journal = document.getElementById(journal).value;
-        var requestbody = "title=" + encodeURIComponent(paper_title) + "&name=" + encodeURIComponent(paper_name) + "&author=" + encodeURIComponent(paper_author)+ "&year=" + encodeURIComponent(paper_year)+ "&context=" + encodeURIComponent(paper_context)+"&journal=" + encodeURIComponent(paper_journal);
+        var rating_reason = document.getElementById(ratingReason).value;
+        var rating_who = document.getElementById(ratingWho).value;
+        var requestbody = "title=" + encodeURIComponent(paper_title) + "&name=" + encodeURIComponent(paper_name) + "&author=" + encodeURIComponent(paper_author)+ "&year=" + encodeURIComponent(paper_year)+"&journal=" + encodeURIComponent(paper_journal) +"&ratingC=" + encodeURIComponent(ratingC)+ "&ratingReason=" + encodeURIComponent(rating_reason)+ "&ratingWho=" + encodeURIComponent(rating_who)+ "&ratingCf=" + encodeURIComponent(ratingCf);
         xhr.open("POST", dataSource, true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.onreadystatechange = function () {
