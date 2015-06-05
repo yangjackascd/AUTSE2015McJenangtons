@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 2015-05-27 15:38:43
+-- Generation Time: 2015-06-05 16:00:40
 -- 服务器版本： 5.6.21
 -- PHP Version: 5.5.19
 
@@ -57,6 +57,35 @@ INSERT INTO `paper_table` (`paper_name`, `paper_id`, `author`, `paper_title`, `y
 -- --------------------------------------------------------
 
 --
+-- 表的结构 `rating_paper_table`
+--
+
+CREATE TABLE IF NOT EXISTS `rating_paper_table` (
+  `ratingCF` int(11) NOT NULL,
+  `paper_name` varchar(100) NOT NULL,
+  `author` varchar(100) DEFAULT NULL,
+  `paper_title` varchar(20) DEFAULT NULL,
+  `year` varchar(10) DEFAULT NULL,
+  `rating_date` varchar(20) DEFAULT NULL,
+  `username` varchar(20) DEFAULT NULL,
+  `ratingC` int(11) NOT NULL,
+  `paper_journal` varchar(100) NOT NULL,
+  `rating_name` varchar(255) NOT NULL COMMENT 'who rate this paper',
+  `rating_reason` varchar(255) NOT NULL,
+`rating_id` int(255) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- 转存表中的数据 `rating_paper_table`
+--
+
+INSERT INTO `rating_paper_table` (`ratingCF`, `paper_name`, `author`, `paper_title`, `year`, `rating_date`, `username`, `ratingC`, `paper_journal`, `rating_name`, `rating_reason`, `rating_id`) VALUES
+(0, 'aaa', 'ccc', 'ATDD', '1231', '06/06/2015 01:37:02 ', 'jackascd', 0, 'ddd', '', '', 1),
+(5, 'Home make cake', 'Jake', 'ATDD', '2014', '06/06/2015 01:44:51 ', 'jackascd', 5, 'Home', 'Jake', 'jake so sexy', 2);
+
+-- --------------------------------------------------------
+
+--
 -- 表的结构 `user_table`
 --
 
@@ -86,6 +115,12 @@ ALTER TABLE `paper_table`
  ADD PRIMARY KEY (`paper_id`);
 
 --
+-- Indexes for table `rating_paper_table`
+--
+ALTER TABLE `rating_paper_table`
+ ADD PRIMARY KEY (`rating_id`);
+
+--
 -- Indexes for table `user_table`
 --
 ALTER TABLE `user_table`
@@ -100,6 +135,11 @@ ALTER TABLE `user_table`
 --
 ALTER TABLE `paper_table`
 MODIFY `paper_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT for table `rating_paper_table`
+--
+ALTER TABLE `rating_paper_table`
+MODIFY `rating_id` int(255) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
